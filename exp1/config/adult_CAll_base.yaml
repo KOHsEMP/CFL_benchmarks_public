@@ -1,0 +1,34 @@
+# dataset configuration
+exp_name: exp1
+dataset_name: adult
+main_dir: ../
+data_dir: ../../../opt/nas/data
+output_dir: ../output
+
+# experiment configuration
+sample_size: -1 # all
+test_rate: 0.5
+comp_cols:
+  - all
+
+avoid_estimate_cols:
+  - education
+  - occupation
+  - native-country
+
+measure_time: True
+use_jax: True
+
+
+arch: mlp4
+hd: 500
+lr: 0.00005
+bs: 512
+ep: 100
+wd: 0.0002
+
+hds:
+  - 100
+  - 200
+  - 200
+  - 100
